@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ink-950: #030a1c;
+  --color-ink-900: #050f26;
+  --color-ink-850: #071331;
+  --color-ink-800: #0b1b43;
+  --color-ink-700: #12275a;
+  --color-ink-600: #1c3677;
+
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9;
+}
+
+@layer base {
+  html { color-scheme: dark; scroll-behavior: smooth; }
+  body {
+    @apply bg-ink-950 font-sans text-slate-200 antialiased;
+    background-image:
+      radial-gradient(1100px 600px at 85% -10%, rgba(37, 99, 235, 0.22), transparent 60%),
+      radial-gradient(800px 500px at -10% 20%, rgba(29, 78, 216, 0.14), transparent 60%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 { @apply font-semibold tracking-tight text-white; }
+  ::selection { background: rgba(59, 130, 246, 0.4); }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-brand-500; }
+  * { scrollbar-width: thin; scrollbar-color: #1c3677 transparent; }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-brand-500/15 bg-ink-850/90 shadow-[0_8px_30px_rgba(2,8,30,0.45)] backdrop-blur;
+  }
+  .card-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:border-brand-500/50 hover:shadow-xl hover:shadow-brand-600/20;
+  }
+  .input {
+    @apply w-full rounded-xl border border-brand-500/20 bg-ink-900 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 transition focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30;
+  }
+  .gradient-text { @apply bg-gradient-to-r from-brand-500 to-accent-400 bg-clip-text text-transparent; }
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .glow { box-shadow: 0 0 40px rgba(37, 99, 235, 0.35); }
+}

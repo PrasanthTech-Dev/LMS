@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- 3D base left face -->
+  <path d="M15 32L32 43V54L15 43Z" fill="#0099ff"/>
+  <!-- 3D base right face -->
+  <path d="M32 43L49 32V43L32 54Z" fill="#0055d4"/>
+  <!-- Top mortarboard diamond -->
+  <path d="M32 10L58 26L32 42L6 26Z" fill="#00c8ff"/>
+  <path d="M32 10L58 26L32 42L6 26Z" stroke="#7dd3fc" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Center glowing button -->
+  <circle cx="32" cy="26" r="3" fill="#ffffff"/>
+  <!-- Tassel line -->
+  <path d="M32 26L52 35V49" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Tassel bead -->
+  <circle cx="52" cy="50" r="2.5" fill="#38bdf8"/>
+</svg>
